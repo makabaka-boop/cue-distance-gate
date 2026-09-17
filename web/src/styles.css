@@ -1,0 +1,183 @@
+:root {
+  color-scheme: dark;
+  font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #14161c;
+  color: #e8e9ee;
+}
+
+.page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+}
+
+h1 {
+  font-size: 1.6rem;
+  margin: 0 0 8px;
+}
+
+.subtitle {
+  color: #9aa0b0;
+  margin: 0 0 24px;
+}
+
+.editors {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 800px) {
+  .editors {
+    grid-template-columns: 1fr;
+  }
+}
+
+.editor {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #b9bdca;
+}
+
+.editor textarea {
+  width: 100%;
+  resize: vertical;
+  background: #0d0f14;
+  color: #dfe3ee;
+  border: 1px solid #2c3040;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-family: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.editor textarea:focus {
+  outline: 2px solid #4f7cff;
+  outline-offset: -1px;
+}
+
+.controls {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.threshold {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.9rem;
+  color: #b9bdca;
+}
+
+.threshold input {
+  width: 120px;
+  background: #0d0f14;
+  color: #dfe3ee;
+  border: 1px solid #2c3040;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 1rem;
+}
+
+button {
+  background: #4f7cff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 28px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+
+.verdict {
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin-top: 8px;
+  border: 1px solid;
+}
+
+.verdict h2 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+}
+
+.verdict .headline {
+  margin: 0 0 12px;
+  font-size: 1.05rem;
+}
+
+.verdict.ok {
+  background: #10281c;
+  border-color: #2c7a4b;
+}
+
+.verdict.exceeded {
+  background: #2c1616;
+  border-color: #a03c3c;
+}
+
+.verdict.error {
+  background: #2c2113;
+  border-color: #a07a3c;
+}
+
+.verdict code {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.facts {
+  display: flex;
+  gap: 32px;
+  margin: 0 0 12px;
+}
+
+.facts div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.facts dt {
+  font-size: 0.78rem;
+  color: #9aa0b0;
+}
+
+.facts dd {
+  margin: 0;
+  font-size: 1.15rem;
+  font-variant-numeric: tabular-nums;
+}
+
+details summary {
+  cursor: pointer;
+  color: #9aa0b0;
+  font-size: 0.85rem;
+}
+
+details pre {
+  background: #0d0f14;
+  border-radius: 8px;
+  padding: 12px;
+  overflow: auto;
+  font-size: 0.8rem;
+}
