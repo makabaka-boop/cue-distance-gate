@@ -1,0 +1,162 @@
+:root {
+  color-scheme: light;
+  font-family:
+    'PingFang SC', 'Microsoft YaHei', system-ui, -apple-system, 'Segoe UI',
+    sans-serif;
+  --border: #d0d7de;
+  --muted: #57606a;
+  --bg: #f6f8fa;
+  --within-bg: #dafbe1;
+  --within-border: #1a7f37;
+  --exceeded-bg: #fff1e5;
+  --exceeded-border: #bc4c00;
+  --error-bg: #ffebe9;
+  --error-border: #cf222e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: #1f2328;
+}
+
+.page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 32px 24px 64px;
+}
+
+.page-header h1 {
+  margin: 0 0 8px;
+  font-size: 26px;
+}
+
+.subtitle {
+  margin: 0 0 24px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.editors {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.editor {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.editor textarea {
+  width: 100%;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 13px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  resize: vertical;
+  background: #fff;
+  color: #1f2328;
+}
+
+.editor textarea:focus,
+.k-control input:focus {
+  outline: 2px solid #0969da33;
+  border-color: #0969da;
+}
+
+.controls {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.k-control {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.k-control input {
+  width: 110px;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+button {
+  padding: 9px 18px;
+  border-radius: 8px;
+  border: 1px solid #0969da;
+  background: #0969da;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+button.secondary {
+  background: #fff;
+  color: #1f2328;
+  border-color: var(--border);
+}
+
+.result {
+  border-radius: 10px;
+  padding: 16px 20px;
+  font-size: 14px;
+  border: 1px solid var(--border);
+  background: #fff;
+}
+
+.verdict {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.detail {
+  color: var(--muted);
+}
+
+.result-idle {
+  color: var(--muted);
+  background: #fff;
+}
+
+.result-within {
+  background: var(--within-bg);
+  border-color: var(--within-border);
+}
+
+.result-exceeded {
+  background: var(--exceeded-bg);
+  border-color: var(--exceeded-border);
+}
+
+.result-error {
+  background: var(--error-bg);
+  border-color: var(--error-border);
+}
+
+@media (max-width: 760px) {
+  .editors {
+    grid-template-columns: 1fr;
+  }
+}
